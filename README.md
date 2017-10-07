@@ -1,28 +1,22 @@
-# RhinoBot: The music bot for Discord.
-
-MusicBot is a Discord music bot written in [Python](https://www.python.org "Python homepage"). It plays requested songs and if the queue becomes empty it will play through a list of existing songs.
+# Project Helix Public Release
+My own Version of RhinoBot
 
 ### How do I set it up?
 
-[CLICK HERE](https://github.com/SexualRhinoceros/MusicBot/wiki) to find the guide that suites your operating system.
+[CLICK HERE](https://github.com/SexualRhinoceros/MusicBot/wiki) for their wiki for info on installing
 
 ### Commands
 
-Commands are listed [here](https://github.com/SexualRhinoceros/MusicBot/wiki/Commands "Commands list").
+do thelp to find out the commands
 
-### Configuration
+### Configing
 
-The main configuration file is `config/options.ini`, but is not included.  Simply make a copy of `example_options.ini` and rename to `options.ini`.  See `example_options.ini` for more information on how to configure it.
+go to config/options.ini change it to add your bot tokin and your owner id which you can get by going to discord - appearance - and enabling developer mode right click on yourself and bam you get your owner id
 
-[CLICK HERE](https://github.com/SexualRhinoceros/MusicBot/wiki/Configuration) for more details.
 
-### Great, now how do I use it?
-Download the bot, set the dependencies up, then run `runbot.bat`! (or `run.sh` on mac/linux)  Read the tutorial if you don't know what to do.
+### Running the Bot
+in the command line for windows python run.py
+in the command line for linux do python3.5 run.py
+in the command line for macOS do python3.5 run.py
 
-If you have any errors, read the FAQ. If that didn't help, you can ask for assistance on the discord help server. Is is recommended to take screenshots so the developers can see errors.
-
-[Rhino Help Server](http://discord.me/rhinohelp "Discord link")
-
-### FAQ
-
-Some frequently asked questions are listed on the wiki [here](https://github.com/SexualRhinoceros/MusicBot/wiki/FAQ "Wiki").
+### AFTER THAT YOU SHOULD BE GOOD TO GO
