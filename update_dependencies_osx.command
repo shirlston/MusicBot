@@ -5,4 +5,4 @@ python3.5 -V /dev/null 2>&1 ||{
 }
 
 cd "$(dirname "$BASH_SOURCE")"
-python3.5 -m pip install --upgrade -r requirements.txt
+python3.5 -m pip install --force --upgrade -r requirements.txt
