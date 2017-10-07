@@ -20,8 +20,8 @@ IF x%ValueValue:0x0=%==x%ValueValue% (
 ENDLOCAL
 
 
-IF EXIST %SYSTEMROOT%\py.exe (
-    CMD /k %SYSTEMROOT%\py.exe -3.5 run.py
+IF EXIST %SYSTEMROOT%\python (
+    CMD /k %SYSTEMROOT%\python run.py
     EXIT
 )
 
