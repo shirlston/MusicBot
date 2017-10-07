@@ -1,7 +1,7 @@
 import os.path
 
-MAIN_VERSION = '1.9.5_2'
-SUB_VERSION = ''
+MAIN_VERSION = '\nCodeName: Oxygen-3\nPublic Release'
+SUB_VERSION = ' \nBuild 1.2.0_2'
 VERSION = MAIN_VERSION + SUB_VERSION
 
 AUDIO_CACHE_PATH = os.path.join(os.getcwd(), 'audio_cache')
