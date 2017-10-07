@@ -28,14 +28,14 @@ if '%errorlevel%' NEQ '0' (
 CD /d "%~dp0"
 
 IF EXIST %SYSTEMROOT%\py.exe (
-    CMD /k C:\Windows\py.exe -3.5 -m pip install --upgrade -r requirements.txt
+    CMD /k C:\Windows\py.exe -3.5 -m pip install --force --upgrade -r requirements.txt
     EXIT
 )
 
 python --version > NUL 2>&1
 IF %ERRORLEVEL% NEQ 0 GOTO nopython
 
-CMD /k python -m pip install --upgrade -r requirements.txt
+CMD /k python -m pip install --force --upgrade -r requirements.txt
 GOTO end
 
 :nopython
