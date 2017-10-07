@@ -1162,7 +1162,6 @@ class MusicBot(discord.Client):
             helpmsg += ", ".join(commands)
             helpmsg += "```\n**Do** `.credits` **to find source project links**"
             helpmsg += "\nYou can also use `{}thelp cmdname` for more info about each command.".format(self.config.command_prefix)
-            helpmsg+= "`.about` gives some useful info you should check it out"
 
             return Response(helpmsg, reply=True, delete_after=60)
 
