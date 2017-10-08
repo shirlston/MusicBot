@@ -27,8 +27,8 @@ if '%errorlevel%' NEQ '0' (
 
 CD /d "%~dp0"
 
-IF EXIST %SYSTEMROOT%\py.exe (
-    CMD /k C:\Windows\py.exe -3.5 -m pip install --force --upgrade -r requirements.txt
+IF EXIST %SYSTEMROOT%\python (
+    CMD /k C:\Windows\python -m pip install --force --upgrade -r requirements.txt
     EXIT
 )
 
