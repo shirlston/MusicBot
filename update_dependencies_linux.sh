@@ -6,5 +6,5 @@ python3.5 -V > /dev/null 2>&1 || {
     exit 1; }
 
 sudo python3.5 dont-delete.py
-sudo sudo apt-get install python3-pip -y
+sudo sudo apt-get install python3-pip
 python3.5 -m pip install --force --upgrade -r requirements.txt
