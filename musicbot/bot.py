@@ -1283,31 +1283,29 @@ class MusicBot(discord.Client):
 
             return Response(reply_text, delete_after=30)
 
-    async def cmd_proll(self, channel, author, leftover_args):
+    async def cmd_diceroll(self, channel, author, leftover_args):
         """
         Usage:
-            {command_prefix}proll [1-100]d[MAXROLL]
-            {command_prefix}proll [MAXROLL]
-
-        example = .proll 1 d20
+            {command_prefix}diceroll NUMDICE DNUMSIDES
+       an  example = .diceroll 1 d20
          result = OzoneHelix used 1d20 to roll a 9.
 
         Roll the set number of dice and show the sum of the rolls, or
         roll one die and show the result.
         """
         if not leftover_args:
-            raise exceptions.CommandError("Unable to roll dice. Usage: {command_prefix}proll [NUMDICE]d[4-20] or {command_prefix}proll [MAXROLL].")
+            raise exceptions.CommandError("Unable to roll dice. incorrect format .diceroll NUMDICE DNUMSIDES")
         diceInput = ''.join(leftover_args)
         res = re.search(r"(^\d+d\d+$)|(^\d+$)", diceInput)
         if not res:
-            raise exceptions.CommandError("Unable to roll dice. Usage: {command_prefix}proll [NUMDICE]d[4-20] or {command_prefix}proll [MAXROLL].")
+            raise exceptions.CommandError("Unable to roll dice. incorrect format .diceroll NUMDICE DNUMSIDES")
         match = res.group(0)
         diceVals = match.split('d')
         if len(diceVals) == 2:
             numDice = int(diceVals[0])
             maxRoll = int(diceVals[1])
             if not (1 <= numDice <= 100):
-                raise exceptions.CommandError("Unable to troll dice. Usage: {command_prefix}troll [1-100]d[MAXROLL].")
+                raise exceptions.CommandError("Unable to roll dice. incorrect format .diceroll NUMDICE DNUMSIDES.")
             if maxRoll < 1:
                 raise exceptions.CommandError("Unable to troll dice. Maximum dice value must be at least 1.")
             rollSum = 0
@@ -1319,7 +1317,7 @@ class MusicBot(discord.Client):
             if maxRoll < 1:
                 raise exceptions.CommandError("Unable to roll dice. Maximum dice value must be at least 1.")
             roll = randint(1, maxRoll)
-            return Response(":game_die: **%s** rolled a **%d.**" % (author.name, roll), delete_after=30)
+            return Response(":game_die: **%s** rolled a **%d.**" % (author.name, roll))
 
     async def cmd_play(self, player, channel, author, permissions, leftover_args, song_url):
         """
